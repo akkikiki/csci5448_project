@@ -31,11 +31,12 @@
 
 %NOTE: Remember to start from simple and stupid
 
-\begin{itemize}
+\begin{itemize}[leftmargin=4\parindent,itemsep=-1ex]
  \item Name: Yoshinari Fujinuma
  \item Github link: \url{https://github.com/akkikiki/csci5448_project}
- \item Title: Visualizing Objective Function
- \item Project Summary: A GUI tool that could visualize the shape of an objective function of a given machine learning model (e.g., neural networks). The main objective of this tool is to let users debug while training a model. I will put the actual GUI as out of the scope for this class project. 
+ %\item Title: Visualizing Objective Function
+ \item Title: ML Debugger
+ \item Project Summary: A CUI tool that could visualize the shape of an objective function of a given machine learning model (e.g., neural networks). The main objective of this tool is to let users debug while training a model. 
 \end{itemize}
 
 %Functionality:
@@ -64,10 +65,18 @@
  \centering
   \begin{tabular}{|l|l|l|l|}
   \hline
-  \bf ID & \bf Requirement\\ \hline
-       1 & Plot and visualization of ML models\\
-       2 & Allow to be used by multiple users \\
-       3 & Model parameters should be easily tweakable \\
+  \bf ID & \bf Requirement                                                           \\ \hline
+       1 & Plot and visualization of ML models                                       \\
+       2 & Allow to be used by multiple users                                        \\
+       3 & Model parameters should be easily tweakable                               \\
+       4 & A user cannot load another user's model                                   \\
+       5 & A user can tweak the parameter of a trained model                         \\
+       6 & A user can delete a model                                                 \\
+       7 & A user cannot delete data                                                 \\
+       8 & A user can confirm whether a model's status (finished tranining or not)   \\
+       9 & An admin can delete a user                                                \\
+      10 & An admin can delete a model                                               \\
+      11 & An admin can delete data                                                  \\
   \hline
   \end{tabular}
  \caption{Project Requirements} 
@@ -75,33 +84,39 @@
 
 
 
-\section{User Requirements}
-\begin{enumerate}[leftmargin=4\parindent,itemsep=-1ex]
- \item A user cannot load another user's model
- \item A user can tweak the parameter of a trained model
- \item A user can delete a model
- \item A user cannot delete data
- \item A user can confirm whether a model's status (finished tranining or not)
- \item An admin can delete a user
- \item An admin can delete a model
- \item An admin can delete data
-\end{enumerate}
+%\section{User Requirements}
+%\begin{enumerate}[leftmargin=4\parindent,itemsep=-1ex]
+% \item A user cannot load another user's model
+% \item A user can tweak the parameter of a trained model
+% \item A user can delete a model
+% \item A user cannot delete data
+% \item A user can confirm whether a model's status (finished tranining or not)
+% \item An admin can delete a user
+% \item An admin can delete a model
+% \item An admin can delete data
+%\end{enumerate}
+%
+%\section{Funcationality Requirements}
+%\begin{enumerate}[leftmargin=4\parindent,itemsep=-1ex]
+% \item Keep track of saved models by individual user
+%\end{enumerate}
 
-\section{Funcationality Requirements}
-\begin{enumerate}[leftmargin=4\parindent,itemsep=-1ex]
- \item Multiple users, and a user need to login
- \item Keep track of saved models by individual user
-\end{enumerate}
-
+\newpage
 \section{UI Mockups}
-menu/user interaction
-\begin{enumerate}[leftmargin=4\parindent,itemsep=-1ex]
- \item 
-\end{enumerate}
+Menu/user interaction
 
+\begin{figure}[htb]
+ \centering
+     {\includegraphics[width=.7\linewidth]{image/ui_mockup.pdf}}
+    \vspace{-2ex}
+     \caption{\label{fig:ui_mock}  
+       UI Mockup 
+     }
+\end{figure}
+
+\newpage
 \section{Class Diagram}
-
-\begin{figure}[tb]
+\begin{figure}[htb]
  \centering
      {\includegraphics[width=.9\linewidth]{image/class_diagram.pdf}}
     \vspace{-2ex}
