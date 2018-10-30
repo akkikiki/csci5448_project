@@ -8,4 +8,6 @@ if __name__ == "__main__":
     d = Driver()
     d.user_controller.updateView()
 
+    d.menu_controller.updateView()
+
 

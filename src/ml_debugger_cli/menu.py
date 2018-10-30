@@ -1,12 +1,15 @@
 from user_data import UserData
 
 class Menu():
-    def __init__(self, name):
+    def __init__(self):
         self._actions = ["Data", "Model", "Show status", "Login", "Exit"]
         self._user = None
-        self._user_data = UserData(name)
-        self.showActions()
-        action = input("press the action number >> ")
+        # self._user_data = UserData(name)
+        # self.showActions()
+
+        # action = input("press the action number >> ")
+    def getActions(self):
+        return self._actions
 
     def showActions(self):
         for i, a in enumerate(self._actions):
