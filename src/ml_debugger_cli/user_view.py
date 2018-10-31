@@ -5,7 +5,10 @@ class UserView():
     #UserData ud = UserData()
 
     def showStatus(self, user):
-        print("UserName = " + user.getName())
+        print("-------")
+        print("User Name = " + user.getName())
         print("Password = " + user.getPassword()) # may not want this
-        print("Permission Level = " + user.getPermission()) # may not want this
+        print("Permission Level = " + user.getPermission())
+        print("-------")
+        print()
 

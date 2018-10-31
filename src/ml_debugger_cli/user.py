@@ -10,6 +10,9 @@ class User():
     def getName(self):
         return self._name
 
+    def setName(self, name):
+        self._name = name
+
     def getPermission(self):
         return self._permission_level
 
