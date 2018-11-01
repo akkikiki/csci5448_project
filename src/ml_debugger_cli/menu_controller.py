@@ -1,4 +1,5 @@
 from menu import Menu
+from menu_data import MenuData
 from menu_user import MenuUser
 from menu_view import MenuView
 import sys
@@ -10,6 +11,9 @@ class MenuController():
 
     def transitionUserMenu(self):
         self._model = MenuUser()
+
+    def transitionDataMenu(self):
+        self._model = MenuData()
 
     def updateView(self):
         self._view.showActions(self._model)
@@ -31,6 +35,8 @@ class MenuController():
         action = self._model.getKeyAction(key)
         if action == "User":
             self.transitionUserMenu()
+        if action == "Data":
+            self.transitionDataMenu()
         elif action == "Exit":
             sys.exit(1)
         else:

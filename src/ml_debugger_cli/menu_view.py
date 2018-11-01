@@ -1,5 +1,4 @@
 class MenuView():
-    #UserData ud = UserData()
 
     def showActions(self, menu):
         print("----Menu---")
