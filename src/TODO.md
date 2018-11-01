@@ -1,10 +1,11 @@
 # TODO
-- [x] Implement a simple system to keep track of user
+- [x] Implement a simple system to keep track of logged in user
 - [x] Implement a simple menu for CUI
 - [ ] Implement the ``TextClassifier'' class (which is planned to be a wrapper of one method in [scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html))
 - [ ] Implement the ``Corpus'' class (which is the class that shows basic information of the training data)
 
 # TODO for the TextClassifier class
+- [ ] Keep track of which user created which classifier
 - [ ] Implement a method that tweaks a specified parameter/weight by increasing or decreasing by a specified float number.
 - [ ] Use Momento design pattern to keep track of the ``tweaked'' parameter states
 

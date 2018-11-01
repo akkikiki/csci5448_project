@@ -13,6 +13,10 @@ class Driver():
         if action == "Show User Status":
             self.user_controller.updateView()
 
+        elif action == "Change Password":
+            password = input("New password >>  ")
+            self.user_controller.changePassword(password)
+
         elif action == "Save":
             self.user_controller.saveUser()
 
@@ -23,6 +27,5 @@ class Driver():
             name = input("New name >>  ")
             self.user_controller.changeName(name)
         else:
-            print("WARNING: Not implemented yet")
             print()
 

@@ -14,6 +14,9 @@ class UserController():
     def changeName(self, name):
         self._user_model.setName(name)
 
+    def changePassword(self, password):
+        self._user_model.setPassword(password)
+
     def saveUser(self):
         self._user_model.save()
 
