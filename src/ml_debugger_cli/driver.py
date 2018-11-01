@@ -12,6 +12,13 @@ class Driver():
         action = self.menu_controller.keyPressed(key)
         if action == "Show User Status":
             self.user_controller.updateView()
+
+        elif action == "Save":
+            self.user_controller.saveUser()
+
+        elif action == "Load":
+            self.user_controller.loadUser()
+
         elif action == "Change Name":
             name = input("New name >>  ")
             self.user_controller.changeName(name)

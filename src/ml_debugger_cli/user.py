@@ -1,3 +1,5 @@
+import json
+
 class User():
     def __init__(self, name, password):
         self._name = name
@@ -18,3 +20,19 @@ class User():
 
     def setPermission(self, permission):
         self._permission_level = permission
+
+    def setPassword(self, password):
+        self._password = password
+
+    def load(self):
+        data = json.load(open("data/user_data.json"))
+        self.setName(data["name"])
+        self.setPassword(data["password"])
+        self.setPermission(data["permission"])
+
+    def save(self):
+        data = {}
+        data["name"] = self._name
+        data["password"] = self._password
+        data["permission"] = self._permission_level
+        json.dump(data, open("data/user_data.json", "w"))

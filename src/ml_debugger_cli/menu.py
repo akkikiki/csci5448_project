@@ -2,7 +2,7 @@ import sys
 
 class Menu():
     def __init__(self):
-        self._actions = ["Data", "Model", "User", "Login", "Exit"]
+        self._actions = ["Data", "Model", "User", "Exit"]
         self._user = None
 
     def getActions(self):
@@ -10,7 +10,7 @@ class Menu():
 
     def log_out(self):
         self._user = None
-        print("logout successfull")
+        print("logout successful")
 
     def getKeyAction(self, key):
         i = int(key)

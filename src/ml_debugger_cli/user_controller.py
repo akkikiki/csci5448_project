@@ -13,3 +13,9 @@ class UserController():
 
     def changeName(self, name):
         self._user_model.setName(name)
+
+    def saveUser(self):
+        self._user_model.save()
+
+    def loadUser(self):
+        self._user_model.load()
