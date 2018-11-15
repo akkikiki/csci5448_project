@@ -31,5 +31,14 @@ class Driver():
             step_size = int(input("Type how much value to tweak a param >> "))
             self.classifier_controller.tweakParams(indice, step_size)
 
+        elif action == "Save Current Parameters":
+            self.classifier_controller.saveParams()
+            #print(len(self.classifier_controller._model._care_taker._mementos))
+
         elif action == "Reset Tweaked Parameters":
             self.classifier_controller.resetParams()
+
+        elif action == "Load Previous State":
+            indice = int(input("Type the indice of state you want to load >> "))
+            self.classifier_controller.loadSate(indice)
+

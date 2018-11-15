@@ -8,9 +8,9 @@
 - [] Use Command design pattern to implement undo.
 
 # TODO for the TextClassifier class
-- [ ] Keep track of which user created which classifier
-- [ ] Implement a method that tweaks a specified parameter/weight by increasing or decreasing by a specified float number.
-- [ ] Use Momento design pattern to keep track of the ``tweaked'' parameter states
+- [x] Keep track of which user created which classifier
+- [x] Implement a method that tweaks a specified parameter/weight by increasing or decreasing by a specified float number.
+- [x] Use Momento design pattern to keep track of the ``tweaked'' parameter states
 
 # TODO for the Corpus class
 - [ ] Implement a method that shows some sampled texts in the training data.

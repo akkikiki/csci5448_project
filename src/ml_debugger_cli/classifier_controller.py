@@ -12,3 +12,9 @@ class ClassifierController():
 
     def resetParams(self):
         self._model.restart()
+
+    def saveParams(self):
+        self._model.save()
+
+    def loadSate(self, indice):
+        self._model.resumeState(indice)
