@@ -1,6 +1,7 @@
 from menu import Menu
 from menu_classifier import MenuClassifier
 from menu_data import MenuData
+from menu_corpus import MenuCorpus
 from menu_user import MenuUser
 from menu_view import MenuView
 import sys
@@ -13,8 +14,8 @@ class MenuController():
     def transitionUserMenu(self):
         self._model = MenuUser()
 
-    def transitionDataMenu(self):
-        self._model = MenuData()
+    def transitionCorpusMenu(self):
+        self._model = MenuCorpus()
 
     def transitionClassifierMenu(self):
         self._model = MenuClassifier()
@@ -40,8 +41,8 @@ class MenuController():
         if action == "User":
             self.transitionUserMenu()
 
-        elif action == "Data":
-            self.transitionDataMenu()
+        elif action == "Corpus":
+            self.transitionCorpusMenu()
 
         elif action == "Model":
             self.transitionClassifierMenu()

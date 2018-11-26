@@ -2,7 +2,7 @@ import sys
 
 class Menu():
     def __init__(self):
-        self._actions = ["Data", "Model", "User", "Exit"]
+        self._actions = ["Corpus", "Model", "User", "Exit"]
         self._user = None
 
     def getActions(self):
