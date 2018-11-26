@@ -1,4 +1,6 @@
-import sys
+"""
+Class for menu
+"""
 
 class Menu():
     def __init__(self):

@@ -1,5 +1,7 @@
-# Communicates with each controller
-import sys
+"""
+Communicates with each controller
+"""
+
 from user_controller import UserController
 from menu_controller import MenuController
 from classifier_controller import ClassifierController
@@ -18,6 +20,7 @@ class Driver():
         Handle the key pressed by the user
 
         :param key: Keyboard key
+        :return: the menu action corresponding to the pressed key
         """
         action = self.menu_controller.keyPressed(key)
         if action:
@@ -37,11 +40,11 @@ class Driver():
 
     def keyPressedMenuClassifier(self, action):
         """
-        Handle keys related to the Classifier class
+        Handle actions related to Classifier
+
         :param action: The corresponding action string
-        :return:
         """
-        # Handle Menus Related to Classifier
+
         if action == "Show Parameters":
             self.classifier_controller.printParams()
 
@@ -52,7 +55,6 @@ class Driver():
 
         elif action == "Save Current Parameters":
             self.classifier_controller.saveParams()
-            #print(len(self.classifier_controller._model._care_taker._mementos))
 
         elif action == "Reset Tweaked Parameters":
             self.classifier_controller.resetParams()
