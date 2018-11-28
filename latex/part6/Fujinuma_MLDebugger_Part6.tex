@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{color}
+%\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{adjustbox}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{mdwlist}
+\usepackage{tablefootnote}
+\usepackage{arabtex}
+\usepackage{enumitem}
+\usepackage{utf8}
+\usepackage{tipa}
+%\usepackage{floatrow}
+\usepackage[font=small,labelfont=bf,tableposition=top]{caption}
+\DeclareCaptionLabelFormat{tableonly}{\tablename~\thetable}
+%\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+
+\begin{document}
+\vspace{-1cm}
+\title{\vspace{-2ex} Object Oriented Analysis and Design Project: Part 6\vspace{-2ex}}
+%\author{\vspace{-2ex}}
+\date{\vspace{-6ex}}
+\maketitle
+
+%NOTE: Remember to start from simple and stupid
+
+\section{Summary}
+\begin{itemize}[leftmargin=4\parindent,itemsep=-1ex]
+ \item Name: Yoshinari Fujinuma
+ \item Github link: \url{https://github.com/akkikiki/csci5448_project}
+ %\item Title: Visualizing Objective Function
+ \item Title: Machine Learning (ML) Model Debugger
+ \item Project Summary: A CUI tool that could visualize and interactwith a  machine learning model (e.g., neural networks). The main objective of this tool is to let users save, load, train, and debug a trained model in an feasyc and nituitive way. 
+\end{itemize}
+
+\section{Features Implemented and Not Implemented}
+
+\begin{table}[htb]
+ \small
+ \centering
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+  \bf ID & \bf Requirement                                                          & Implemented \\ \hline
+       1 & Plot and visualization of ML models                                      & \\
+       2 & Allow to be used by multiple users                                       & \checkmark\\
+       3 & Model parameters should be easily tweakable                              & \checkmark\\
+       4 & A user cannot load another user's model                                  & \\
+       5 & A user can tweak the parameter of a trained model                        & \checkmark\\
+       6 & A user can delete a model                                                & \\
+       7 & A user cannot delete data                                                & \\
+       8 & A user can confirm whether a model's status (finished tranining or not)  & \\
+       9 & An admin can delete a user                                               & \\
+      10 & An admin can delete a model                                              & \\
+      11 & An admin can delete data                                                 & \\
+  \hline
+  \end{tabular}
+ \caption{Project Requirements. The features with \checkmark are implemented in this final project. } 
+\end{table}
+
+%Stretch Functionality:
+%\begin{enumerate}
+% \setcounter{enumi}{6}
+% \item something
+%\end{enumerate}
+
+\end{document}
