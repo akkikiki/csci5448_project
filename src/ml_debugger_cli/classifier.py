@@ -13,7 +13,6 @@ class TextClassifier():
         self._care_taker = CareTaker()
 
         self._tweaks = 0  # keeping track of how many times did I tweak
-        #self._params = None
         self.initDefualt()
 
 
@@ -21,7 +20,6 @@ class TextClassifier():
         params = np.zeros(5, dtype=float)
         self._originator.setState(params)
         self.save() # saving initial state
-        # print(self._care_taker.getMoments(0).getState())
 
     def tweakParameters(self, param_indice, step_size):
         """
@@ -60,6 +58,10 @@ class TextClassifier():
         self._originator.setMementoState(memento)
 
     def printParams(self):
+        """
+        Output the current parameters to the standard output.
+        :return:
+        """
         print(self._originator.getState())
 
 if __name__ == "__main__":
