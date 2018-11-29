@@ -10,4 +10,10 @@ class CareTaker():
         self._mementos.append(state)
 
     def getMoments(self, indice):
+        """
+        Getter for Memento
+        
+        :param indice: The indice of the memento you saved
+        :return: Memento
+        """
         return self._mementos[indice]
