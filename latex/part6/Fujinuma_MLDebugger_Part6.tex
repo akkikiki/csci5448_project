@@ -64,13 +64,66 @@
  \caption{Project Requirements. The features with \checkmark are implemented in this final project. } 
 \end{table}
 
+\section{What Changed from the Initial Class Diagram}
+\paragraph{More Classes}
+Since I did not have specific design pattern in mind when drawing the initial class diagram, I added more while implementing those. 
+
+\paragraph{Separating out Model, View, and Controllers}
+Initially, I tried to implement everything into one class, but that soon screw up and violated the ``separation of concerns'' principle. 
+Instead, I separate them out and created another class called ``Driver'' to communicate with each controllers. 
+
 \section{Design Patterns}
 
 \subsection{Memento}
+Figure~\ref{fig:memento} shows the class diagram for the Memento pattern I implemented. 
+I choose Memento pattern to let the users save the current state of tweaked parameters. 
+Furthermore, users would like to go back to the state specified rather than doing undos one-by-one. 
+
+I imeplemented this in the ``classifier\_caretaker.py'',  ``classifier\_memento.py'', and ``classifier\_originator.py'' . 
+
+%\section{Class Diagram}
+\begin{figure}[htb]
+ \centering
+     {\includegraphics[width=.75\linewidth]{image/Memento.pdf}}
+    \vspace{-2ex}
+     \caption{\label{fig:memento}  
+        Class diagram for Memento pattern.
+     }
+\end{figure}
 
 \subsection{Factory}
-I choose Factory method because I wanted the same function across all corpus file types. 
+Figure~\ref{fig:factory} shows the class diagram for the Factory pattern I implemented. 
+I choose Factory pattern because I wanted the same function across all corpus file types. 
 Therefore, I thought factory design pattern is most suitable for it. 
+
+I imeplemented this pattern in ``corpus.py''.
+
+\begin{figure}[htb]
+ \centering
+     {\includegraphics[width=.75\linewidth]{image/Factory.pdf}}
+    \vspace{-2ex}
+     \caption{\label{fig:factory}  
+        Class diagram for Factory pattern.
+     }
+\end{figure}
+
+\subsection{State}
+Figure~\ref{fig:state} shows the class diagram for the State pattern I implemented. 
+I choose State pattern to implement the ``Undo'' function to go back one menu transition. 
+In the future, there will be more than one level hierarchy in the menu transition. 
+
+I imeplemented this pattern in ``menu.py''.
+
+\begin{figure}[htb]
+ \centering
+     {\includegraphics[width=.75\linewidth]{image/State.pdf}}
+    \vspace{-2ex}
+     \caption{\label{fig:state}  
+        Class diagram for State pattern.
+     }
+\end{figure}
+
+
 
 \section{What I have Learned}
 Classes are more modular than I thought before implementing each design pattern. 

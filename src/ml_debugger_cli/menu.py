@@ -17,3 +17,6 @@ class Menu():
     def getKeyAction(self, key):
         i = int(key)
         return self._actions[i]
+
+    def doAction(self, context):
+        context.setState(self)
