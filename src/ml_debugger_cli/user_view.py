@@ -2,9 +2,13 @@
 from user import User
 
 class UserView():
-    #UserData ud = UserData()
 
     def showStatus(self, user):
+        """
+        Show the information of a given user
+        :param user: User
+        """
+
         print("-------")
         print("User Name = " + user.getName())
         print("Password = " + user.getPassword()) # may not want this

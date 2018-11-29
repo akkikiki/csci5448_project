@@ -29,6 +29,11 @@ class Driver():
             self.keyPressedMenuClassifier(action)
 
     def keyPressedMenuCorpus(self, action):
+        """
+        Handle the keys related to Corpus
+        :param action: Strng
+        :return: action
+        """
         if action == "Show sample sentences":
             self.corpus_controller.showCorpus()
         elif action == "Read Corpus":

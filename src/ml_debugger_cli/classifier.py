@@ -46,7 +46,7 @@ class TextClassifier():
         :param indice: ith checkpoint
         :return:
         """
-        self._originator.setMementoState(self._care_taker.getMoments(indice))
+        self._originator.setMementoState(self._care_taker.getMemento(indice))
 
     def restart(self):
         """
@@ -54,7 +54,7 @@ class TextClassifier():
 
         :return:
         """
-        memento = self._care_taker.getMoments(0)
+        memento = self._care_taker.getMemento(0)
         self._originator.setMementoState(memento)
 
     def printParams(self):

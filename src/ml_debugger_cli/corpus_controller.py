@@ -7,16 +7,18 @@ class CorpusController():
         self._model = None
 
     def readCorpus(self, f_name):
-        # Implement Factory pattern here
+        """
+        Read the sentences from .txt or .xml file using Factory pattern
+        :param f_name:
+        :return:
+        """
         self._model = Corpus().factory(f_name)
         self._model.read()
 
-        #if f_name.endswith(".xml"):
-        #    self._model.readXML(f_name)
-        #else:
-        #    self._model.readRawText(f_name)
-
     def showCorpus(self):
+        """
+        Show the first 10 sentences from the read file.
+        """
         if self._model.getTopLines():
             print(self._model.getTopLines())
         else:

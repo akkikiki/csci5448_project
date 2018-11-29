@@ -14,24 +14,45 @@ class MenuController():
         self._context = Context()
 
     def transitionUserMenu(self):
+        """
+        Transition to the menu related to Users
+        """
         self._model.doAction(self._context)
         self._model = MenuUser()
 
     def transitionCorpusMenu(self):
+        """
+        Transition to the menu related to Corpus
+        """
         self._model.doAction(self._context)
         self._model = MenuCorpus()
 
     def transitionClassifierMenu(self):
+        """
+        Transition to the menu related to Classifier
+        """
+
         self._model.doAction(self._context)
         self._model = MenuClassifier()
 
     def updateView(self):
+        """
+        Update the view
+        """
         self._view.showActions(self._model)
 
     def getUserInput(self):
+        """
+        Get the user's action item
+        :return: integer input of the user
+        """
         return input("press the action number >> ")
 
     def logIn(self):
+        """
+        Log in the user
+        :return:
+        """
         user, password = self._view.loginView()
 
         if user in self._user_list:
@@ -42,6 +63,11 @@ class MenuController():
 
 
     def keyPressed(self, key):
+        """
+        Handles the action items related to the top level menu
+        :param key: integer
+        :return: action item
+        """
         action = self._model.getKeyAction(key)
         if action == "User":
             self.transitionUserMenu()
