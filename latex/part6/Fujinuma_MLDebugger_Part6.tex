@@ -55,24 +55,27 @@
        5 & A user can tweak the parameter of a trained model                        & \checkmark\\
        6 & A user can delete a model                                                & \\
        7 & A user cannot delete data                                                & \\
-       8 & A user can confirm whether a model's status (finished tranining or not)  & \\
+       8 & A user can confirm model's status  & \checkmark \\
        9 & An admin can delete a user                                               & \\
       10 & An admin can delete a model                                              & \\
       11 & An admin can delete data                                                 & \\
   \hline
   \end{tabular}
- \caption{Project Requirements. The features with \checkmark are implemented in this final project. } 
+ \caption{Project Requirements. The features with \checkmark are implemented in this final project. I prioritized on implementing design patterns. } 
 \end{table}
 
 \section{What Changed from the Initial Class Diagram}
+{\bf NOTE:} For the class diagram, since I have 20+ classes, I will only show the class diagrams related to the 3 design patterns I implemented in Section~\ref{sec:design}.
+
 \paragraph{More Classes}
 Since I did not have specific design pattern in mind when drawing the initial class diagram, I added more while implementing those. 
 
-\paragraph{Separating out Model, View, and Controllers}
+\paragraph{Separating out intot multiple Models, Views, and Controllers}
 Initially, I tried to implement everything into one class, but that soon screw up and violated the ``separation of concerns'' principle. 
 Instead, I separate them out and created another class called ``Driver'' to communicate with each controllers. 
 
 \section{Design Patterns}
+\label{sec:design}
 
 \subsection{Memento}
 Figure~\ref{fig:memento} shows the class diagram for the Memento pattern I implemented. 
@@ -124,9 +127,8 @@ I imeplemented this pattern in ``menu.py''.
 \end{figure}
 
 
-
 \section{What I have Learned}
-Classes are more modular than I thought before implementing each design pattern. 
+I learned few things: (1) Initial planning by the class diagrams help brainstorm the software, but that will certainly change as we imoplment them, and (2) classes are more modular than I initially thought before implementing and learning each design pattern. 
 %Stretch Functionality:
 %\begin{enumerate}
 % \setcounter{enumi}{6}
