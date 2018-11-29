@@ -1,0 +1,15 @@
+digraph "menu.Menu"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="menu.Menu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="menu_classifier.MenuClassifier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmenu__classifier_1_1_menu_classifier.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="menu_corpus.MenuCorpus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmenu__corpus_1_1_menu_corpus.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="menu_data.MenuData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmenu__data_1_1_menu_data.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="menu_user.MenuUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmenu__user_1_1_menu_user.html"];
+}
